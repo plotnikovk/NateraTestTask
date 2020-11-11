@@ -1,0 +1,15 @@
+1. Service allows to create triangle with side1 + side2 = side3. This is not triangle because triangle inequality not performed. Example: 3, 4, 7.
+2. Service creates triangle with zero side. Examples: {0, 5, 5}, {0, 0, 0}.
+3. Service accepts negative values but creates triangle with positive sides. Examples: {3, 4, -5} -> {3 , 4 , 5}, {-3, -4, -5} -> {3, 4, 5}
+4. Service accepts 4 sides and more. Triangle created using first 3 sides. Example: {3, 4, 5, 3} -> {3, 4, 5}
+5. Service allows to create 11 triangles. Specification: "You can save up to 10 triangles".
+6. Area calculated incorrectly. I suppose the reason is in imperfect computation with type double.
+    Example 1: {3.1, 4.2, 5.3} -> 6.506612021628465. Expected: 6.506612021628460
+    Example 2: {3.000000000000001, 4.200000000000009, 5.300000000000005} -> 6.289562286041864. Expected: 6.289562286041867
+    Example 3: {10, 10, 10.0000000001} -> 43.30127018951062. Expected: 43.30127018951061
+    Example 4: {5, 5, 5} -> 10.825317547305483. Expected: 10.825317547305480
+7. Perimeter calculated incorrectly. I suppose the reason is in imperfect computation with type double.
+    Example 1: {3.1, 4.2, 5.3} -> 12.600000000000001. Expected: 12.6
+    Example 2: {3.000000000000001, 4.200000000000009, 5.300000000000005} -> 12.500000000000014. Expected: 12.500000000000015
+    Example 3: {10, 10, 10.0000000001} -> 30.000000000100002. Expected: 30.0000000001
+    Example 4: {5, 5, 5} -> 30.000000000100002. Expected: 30.0000000001

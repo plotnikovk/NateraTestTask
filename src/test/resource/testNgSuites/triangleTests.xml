@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Triangle service tests" verbose="1" >
+    <test name="Triangle" >
+        <classes>
+<!--            <class name="CheckAuthorization" />-->
+            <class name="CreateTriangleTest" />
+            <class name="CheckLimitTest" />
+            <class name="AreaAndPerimeterTest" />
+        </classes>
+    </test>
+</suite>
